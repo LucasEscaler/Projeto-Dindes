@@ -18,7 +18,7 @@ public class Tema {
 	
 	@NotNull(message = "Atributo obrigatório")
 	@Size(min = 2, max = 255)
-	private String tema;
+	private String nomeTema;
 	
 	@NotNull(message = "Atributo obrigatório")
 	@Size(min = 2, max = 255)
@@ -35,12 +35,12 @@ public class Tema {
 		this.id = id;
 	}
 
-	public String getTema() {
-		return tema;
+	public String getNomeTema() {
+		return nomeTema;
 	}
 
-	public void setTema(String tema) {
-		this.tema = tema;
+	public void setNomeTema(String nomeTema) {
+		this.nomeTema = nomeTema;
 	}
 
 	public String getArea() {
