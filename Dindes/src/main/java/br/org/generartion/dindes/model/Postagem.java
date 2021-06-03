@@ -23,7 +23,7 @@ public class Postagem {
 	
 	@NotNull(message = "Atributo obrigatório")
 	@Size(min = 2)
-	private String tema;
+	private String texto;
 	
 	private int curtida;
 	
@@ -46,12 +46,12 @@ public class Postagem {
 		this.id = id;
 	}
 
-	public String getTema() {
-		return tema;
+	public String getTexto() {
+		return texto;
 	}
 
-	public void setTema(String tema) {
-		this.tema = tema;
+	public void setTexto(String texto) {
+		this.texto = texto;
 	}
 
 	public int getCurtida() {
