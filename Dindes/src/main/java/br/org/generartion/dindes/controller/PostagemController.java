@@ -26,11 +26,14 @@ public class PostagemController {
 	@Autowired
 	private PostagemRepository repository;
 	
+	// metodo que mostra todas as postagens
 	@GetMapping
 	ResponseEntity<List<Postagem>> GetAllPostagem (){
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
+	
+	//metodo traz uma postagem por id
 	@GetMapping("/{id}")
 	public ResponseEntity<Postagem> GetByIdPostagem(@PathVariable long id){
 		return repository.findById(id)
@@ -38,21 +41,25 @@ public class PostagemController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
+	// metodo que busca postagens por texto
 	@GetMapping("/texto/{texto}")
 	public ResponseEntity<List<Postagem>> GetByTexto(@PathVariable String texto){
 		return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(texto));
 	}
 	
+	// metodo que posta as postagens 
 	@PostMapping
 	public ResponseEntity<Postagem> postPostagem (@RequestBody Postagem texto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(texto));
 	}
-	
+
+	// metodo que altera as postagens
 	@PutMapping
 	public ResponseEntity<Postagem> putPostagem (@RequestBody Postagem postagem){
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
 	}
-	
+
+	// metodo que deleta uma postagem
 	@DeleteMapping("/{id}")
 	public void deletePostagem (@PathVariable long id) {
 		repository.deleteById(id);
