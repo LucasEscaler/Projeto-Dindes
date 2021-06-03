@@ -24,7 +24,7 @@ public class Usuario {
 	private String nome;
 	
 	@NotNull
-	private Date dataNascimeto;
+	private Date dataNascimento;
 	
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 5 e no máximo 255 caracteres")
@@ -35,7 +35,7 @@ public class Usuario {
 	private String senha;
 	
 	@NotNull
-	@Size(min = 10, max = 255, message = "O campo deve conter no mínimo 10 e no máximo 255 caracteres")
+	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 10 e no máximo 255 caracteres")
 	private String area;
 	
 	@NotNull
@@ -68,12 +68,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public Date getDataNascimeto() {
-		return dataNascimeto;
+	public Date getDataNascimento() {
+		return dataNascimento;
 	}
 
-	public void setDataNascimeto(Date dataNascimeto) {
-		this.dataNascimeto = dataNascimeto;
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	public String getEmail() {

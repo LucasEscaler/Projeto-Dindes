@@ -19,7 +19,7 @@ import br.org.generartion.dindes.model.Tema;
 import br.org.generartion.dindes.repository.TemaRepository;
 
 @RestController
-@RequestMapping("/tema")
+@RequestMapping("/temas")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TemaController {
 
@@ -39,23 +39,23 @@ public class TemaController {
 	}
 	
 	@GetMapping("/nomeTema/{nomeTema}")
-	public ResponseEntity<List<Tema>> GetByTitulo(@PathVariable String nomeTema){
+	public ResponseEntity<List<Tema>> GetByNomeTema(@PathVariable String nomeTema){
 		return ResponseEntity.ok(repository.findAllByNomeTemaContainingIgnoreCase(nomeTema));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Tema> post (@RequestBody Tema Tema){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(Tema));
+	public ResponseEntity<Tema> postTema (@RequestBody Tema tema){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tema));
 	}
 	
 
 	@PutMapping
-	public ResponseEntity<Tema> put (@RequestBody Tema Tema){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(Tema));
+	public ResponseEntity<Tema> putTema (@RequestBody Tema tema){
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(tema));
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
+	public void deleteTema (@PathVariable long id) {
 		repository.deleteById(id);
 	} 
 }

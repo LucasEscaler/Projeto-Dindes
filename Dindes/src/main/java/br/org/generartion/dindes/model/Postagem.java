@@ -26,8 +26,7 @@ public class Postagem {
 	private String texto;
 	
 	private int curtida;
-	
-	@Size(min = 5)
+	 	
 	private String midia;
 	
 	@NotNull(message = "Indique se é a postagem é referente a uma vaga.")

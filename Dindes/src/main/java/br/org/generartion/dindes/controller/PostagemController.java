@@ -27,34 +27,34 @@ public class PostagemController {
 	private PostagemRepository repository;
 	
 	@GetMapping
-	ResponseEntity<List<Postagem>> GetAll (){
+	ResponseEntity<List<Postagem>> GetAllPostagem (){
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Postagem> GetById(@PathVariable long id){
+	public ResponseEntity<Postagem> GetByIdPostagem(@PathVariable long id){
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/texto/{texto}")
-	public ResponseEntity<List<Postagem>> GetByTexto(@PathVariable String Texto){
-		return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(Texto));
+	public ResponseEntity<List<Postagem>> GetByTexto(@PathVariable String texto){
+		return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(texto));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Postagem> post (@RequestBody Postagem Postagem){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(Postagem));
+	public ResponseEntity<Postagem> postPostagem (@RequestBody Postagem texto){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(texto));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Postagem> put (@RequestBody Postagem Postagem){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(Postagem));
+	public ResponseEntity<Postagem> putPostagem (@RequestBody Postagem postagem){
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
+	public void deletePostagem (@PathVariable long id) {
 		repository.deleteById(id);
 	} 
 
