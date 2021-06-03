@@ -20,7 +20,7 @@ public class Tema {
 	@Size(min = 2, max = 255)
 	private String tema;
 	
-	@NotNull
+	@NotNull(message = "Atributo obrigatório")
 	@Size(min = 2, max = 255)
 	private String area;
 	
