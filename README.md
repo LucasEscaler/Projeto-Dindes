@@ -1,6 +1,5 @@
 # Projeto Dindes
-Logo
-
+![Dindes](https://i.imgur.com/PJ37uss.png)
 
 # Descrição
 Lucas <br />
