@@ -65,12 +65,12 @@ public class Usuario {
 	// Autorelacionamento
 	@ManyToOne
 	@JoinColumn(name = "dinde")
-	@JsonIgnoreProperties(value = { "usuarioPadrao", "dinde" })
+	@JsonIgnoreProperties(value = { "apadrinhade", "dinde" })
 	private Usuario dinde;
 
 	@OneToMany(mappedBy = "dinde", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties(value = { "usuarioPadrao", "dinde" })
-	private List<Usuario> usuarioPadrao;
+	@JsonIgnoreProperties(value = { "apadrinhade", "dinde" })
+	private List<Usuario> apadrinhade;
 
 	// Getters e Setters
 	public long getId() {
@@ -161,12 +161,12 @@ public class Usuario {
 		this.dinde = dinde;
 	}
 
-	public List<Usuario> getUsuarioPadrao() {
-		return usuarioPadrao;
+	public List<Usuario> getApadrinhade() {
+		return apadrinhade;
 	}
 
-	public void setUsuarioPadrao(List<Usuario> usuarioPadrao) {
-		this.usuarioPadrao = usuarioPadrao;
+	public void setApadrinhade(List<Usuario> apadrinhade) {
+		this.apadrinhade = apadrinhade;
 	}
 
 	public List<Postagem> getPostagem() {
