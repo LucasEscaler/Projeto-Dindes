@@ -1,30 +1,26 @@
 package br.org.generartion.dindes.model;
 
-//Criando a classe UsuarioLogin
 public class UsuarioLogin {
-
-	private String email;
-
+	
+	private String nome;
+	
+	private String usuario;
+	
 	private String senha;
-
-	// Declarando o token para segurança
+	
 	private String token;
 
-	// Aplicando os Getters and Setters
-	public String getEmail() {
-		return email;
+	
+	public String getNome() {
+		return nome;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public String getUsuario() {
+		return usuario;
 	}
 
 	public String getToken() {
@@ -35,4 +31,15 @@ public class UsuarioLogin {
 		this.token = token;
 	}
 
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }
