@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -19,61 +20,59 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
-	
-	//Atributos
+
+	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotNull(message = "Campo obrigatório")
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 5 e no máximo 255 caracteres")
 	private String nome;
-	
+
 	@NotNull
 	private Date dataNascimento;
-	
+
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 5 e no máximo 255 caracteres")
 	private String email;
-	
+
 	@NotNull
 	@Size(min = 6, max = 255, message = "O campo deve conter no mínimo 6 e no máximo 255 caracteres")
 	private String senha;
-	
+
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 10 e no máximo 255 caracteres")
 	private String area;
-	
+
 	@NotNull
 	@Size(min = 11, max = 255, message = "O campo deve conter no mínimo 11 e no máximo 255 caracteres")
 	private String telefone;
-	
+
 	@Size(min = 0, max = 255, message = "O campo deve conter no máximo 255 caracteres")
 	private String sobre;
-	
+
 	@Size(min = 0, max = 255, message = "O campo deve conter no máximo 255 caracteres")
 	private String fotoString;
-	
+
 	@NotNull
-	private boolean dinde;
-	
+	private boolean eDinde;
+
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
-	
-	
-	/* Auto-Relacionamento
-	
+
+	// Autorelacionamento
 	@ManyToOne
-	@JsonIgnoreProperties("dindeId")
-	private Usuario usuarioId;
-	
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("usuarioId")
-	private List<Usuario> dindeId;
-	*/
-	
-	//Getters e Setters
+	@JoinColumn(name = "dinde")
+	@JsonIgnoreProperties(value = { "usuarioPadrao", "dinde" })
+	private Usuario dinde;
+
+	@OneToMany(mappedBy = "dinde", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties(value = { "usuarioPadrao", "dinde" })
+	private List<Usuario> usuarioPadrao;
+
+	// Getters e Setters
 	public long getId() {
 		return id;
 	}
@@ -146,12 +145,28 @@ public class Usuario {
 		this.fotoString = fotoString;
 	}
 
-	public boolean isDinde() {
+	public boolean iseDinde() {
+		return eDinde;
+	}
+
+	public void seteDinde(boolean eDinde) {
+		this.eDinde = eDinde;
+	}
+
+	public Usuario getDinde() {
 		return dinde;
 	}
 
-	public void setDinde(boolean dinde) {
+	public void setDinde(Usuario dinde) {
 		this.dinde = dinde;
+	}
+
+	public List<Usuario> getUsuarioPadrao() {
+		return usuarioPadrao;
+	}
+
+	public void setUsuarioPadrao(List<Usuario> usuarioPadrao) {
+		this.usuarioPadrao = usuarioPadrao;
 	}
 
 	public List<Postagem> getPostagem() {
@@ -161,7 +176,5 @@ public class Usuario {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
-	
-	
 
 }
