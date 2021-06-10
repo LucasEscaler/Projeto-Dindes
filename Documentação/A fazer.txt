@@ -1,0 +1,25 @@
+A fazer
+
+Relacionamento 
+- Implementar auto relacionamento - OK
+- Testar- OK
+
+Segurança:
+- Adicionar as dependencias - L - ok
+- Criar o Basic security - L - ok
+- Model Usuario login - L -ok 
+- UsuarioRepository -J
+- UsuarioService - J
+- UserDetailsImpl - A
+- UserDetailsServiceImpl - A
+- UsuarioController - V
+- Testar - V
+
+implementações:
+- like
+- postagem service
+- postagem controller
+- Trending topics
+- modificar postagem repósitory
+- Tema service
+- Testar
