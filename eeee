@@ -1,0 +1,164 @@
+[33mcommit eaac25302e5c757c2b173f6586686bbe00d2c43a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Fri Jun 4 11:27:27 2021 -0300
+
+    adicionando relacionamentos
+
+[33mcommit 2c97122fadf1c1d5d1f947f6906bca23e6c8805f[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Thu Jun 3 14:56:04 2021 -0300
+
+    adicionando comentários em postagem
+
+[33mcommit d72d932e1c416e13c959558e9859bccdcc167cb9[m
+Author: João Pedro Nicolete Melo <71336017+JoaoNicolete@users.noreply.github.com>
+Date:   Thu Jun 3 14:13:04 2021 -0300
+
+    Update README.md
+
+[33mcommit 6ad8a58f88518e501a41bc909cefaf2f160037c4[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Thu Jun 3 13:48:38 2021 -0300
+
+    Finalizando a UsuarioController
+
+[33mcommit 418263028b17959e896eb3ffd9f89e96f3b69f52[m
+Author: LucasEscaler <lucas13_escaler@hotmail.com>
+Date:   Thu Jun 3 11:53:53 2021 -0300
+
+    criando UsuarioRepository e UsuarioController
+
+[33mcommit 0a9c754a37d0b5cafe7fe2aa5e9c331211ed4202[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Thu Jun 3 10:54:09 2021 -0300
+
+    Criando repository e controller de Postagem
+
+[33mcommit 0ec29fe9536e404c941c1ed457292d54ac6bbdd6[m
+Merge: b383038 af4b8ef
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Thu Jun 3 10:37:18 2021 -0300
+
+    Merge branch 'main' of https://github.com/LucasEscaler/Projeto-Dindes
+
+[33mcommit b383038192b1222d581d6a0fffb7554e5cd1d7f3[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Thu Jun 3 10:37:13 2021 -0300
+
+    teste
+
+[33mcommit af4b8efe7f4ab95bdf6950a5ad52281c7420f144[m
+Author: Alex Avelino <alourenco08@gmail.com>
+Date:   Thu Jun 3 10:27:18 2021 -0300
+
+    Adicionando os métodos do Tema
+
+[33mcommit 88c8c0975233b4a04b323056e4389a7a43246084[m
+Merge: 2980252 a937451
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 14:14:15 2021 -0300
+
+    Merge branch 'main' of https://github.com/LucasEscaler/Projeto-Dindes
+
+[33mcommit 29802524149bdafbba2513a9115fe0d4772b8088[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 14:13:50 2021 -0300
+
+    Atualizando campos no arquivo Modelo Classes
+
+[33mcommit a937451c4c3064a6eee1135208d6e213b7b24e24[m
+Author: João Pedro Nicolete Melo <71336017+JoaoNicolete@users.noreply.github.com>
+Date:   Mon May 31 14:11:38 2021 -0300
+
+    Update README.md
+
+[33mcommit 4f05fc2ef16b10f3535b5dfaf00a6568b628fa82[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 13:55:36 2021 -0300
+
+    Adicionando arquivo Modelo Classes
+
+[33mcommit 3c590626f407184a633429688ab3297e741f9d02[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 13:19:04 2021 -0300
+
+    Configurando o gitignore
+
+[33mcommit 94c481b272bcf21631c07c4269b937742c402ae0[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 13:13:44 2021 -0300
+
+    Removendo a pasta BancoDeDados
+
+[33mcommit 8aea3104b84e3aae7cc2242f20b62ee235cb69ba[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 13:00:47 2021 -0300
+
+    Finalizando a Model Usuario
+
+[33mcommit 13be83096bfd15660ecf4338f8b004c6305b54ef[m
+Merge: 8574001 79ef0bd
+Author: LucasEscaler <lucas13_escaler@hotmail.com>
+Date:   Mon May 31 11:28:06 2021 -0300
+
+    usuario
+
+[33mcommit 8574001e96753f34e17659d0ad16f387e684043d[m
+Author: LucasEscaler <lucas13_escaler@hotmail.com>
+Date:   Mon May 31 11:22:25 2021 -0300
+
+    usuario
+
+[33mcommit 79ef0bd0fc0d7e1938e036ea8fb5a025915c7abe[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Mon May 31 10:30:40 2021 -0300
+
+    Model: Postagens
+
+[33mcommit a7a688e89bfe7a99067e38e4a15145668995d58a[m
+Author: Alex Avelino <alourenco08@gmail.com>
+Date:   Mon May 31 09:57:44 2021 -0300
+
+    Criação da tabela Tema
+
+[33mcommit 0aa63f17b2bba6ea29d3b2ef532cc246ec9228a5[m
+Author: Alex Avelino <alourenco08@gmail.com>
+Date:   Mon May 31 09:23:48 2021 -0300
+
+    Alex
+
+[33mcommit c01e5081ef527e8eee5d64ece125a58c14dee27c[m
+Author: LucasEscaler <lucas13_escaler@hotmail.com>
+Date:   Mon May 31 09:08:12 2021 -0300
+
+    Lucas
+
+[33mcommit 6783ea8baf93ced23e8314c9aef3d23bc46591cc[m
+Author: Vinicius Roberto <vinicius.rob2002@gmail.com>
+Date:   Mon May 31 09:03:57 2021 -0300
+
+    vinicius
+
+[33mcommit 898dbc682669aa141f1224f4a88362640d148b93[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Thu May 27 15:52:59 2021 -0300
+
+    banco de dados
+
+[33mcommit e039b712b769db6ade21a5c9edfbf32a22062a75[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Thu May 27 15:41:24 2021 -0300
+
+    Atualização dos documentos
+
+[33mcommit 5d8498ecdf1eb10af8a7bbe444952af34cae89e4[m
+Author: João Nicolete <joao.nicolete@usp.br>
+Date:   Mon May 24 11:20:49 2021 -0300
+
+    projeto inicial
+
+[33mcommit 234ca392900e35276ad687b5c60de71a1ca82f99[m
+Author: LucasEscaler <82618745+LucasEscaler@users.noreply.github.com>
+Date:   Wed May 19 10:55:35 2021 -0300
+
+    Initial commit
