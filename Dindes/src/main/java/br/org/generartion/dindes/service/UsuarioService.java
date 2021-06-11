@@ -36,8 +36,6 @@ public class UsuarioService {
 
 	public Optional<Usuario> atualizarUsuario(Usuario usuario){
 
-		if(usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
-			return null;
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		String senhaEncoder = encoder.encode(usuario.getSenha());

@@ -16,10 +16,11 @@ Segurança:
 - Testar - V
 
 implementações:
-- like
+Like:
 - postagem service
 - postagem controller
-- Trending topics
+
+Trending topics:
 - modificar postagem repósitory
 - Tema service
 - Testar
