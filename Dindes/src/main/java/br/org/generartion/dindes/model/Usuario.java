@@ -32,10 +32,10 @@ public class Usuario {
 
 	@NotNull
 	private Date dataNascimento;
-	
+
 	@NotNull
 	private String usuario;
-	
+
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 5 e no máximo 255 caracteres")
 	private String email;
@@ -186,6 +186,6 @@ public class Usuario {
 
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
-	}
 
+	}
 }
