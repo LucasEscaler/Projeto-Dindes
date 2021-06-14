@@ -28,10 +28,10 @@ public class UsuarioService {
 		if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
 			return null;
 
-		int idade = Period.between(usuario.getDataNascimento(), LocalDate.now()).getYears();
+		/*int idade = Period.between(usuario.getDataNascimento(), LocalDate.now()).getYears();
 
 		if (idade < 18)
-			return null;
+			return null;*/
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		String senhaEncoder = encoder.encode(usuario.getSenha());

@@ -1,7 +1,6 @@
 package br.org.generartion.dindes.model;
 
-import java.time.LocalDate;
-
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -32,7 +31,7 @@ public class Usuario {
 	private String nome;
 
 	@NotNull
-	private LocalDate dataNascimento;
+	private Date dataNascimento;
 
 	@NotNull
 	private String usuario;
@@ -93,11 +92,11 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public LocalDate getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(@NotNull LocalDate dataNascimento) {
+	public void setDataNascimento(@NotNull Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
