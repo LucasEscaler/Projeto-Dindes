@@ -31,10 +31,14 @@ João  <br />
 Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
 
 
+## Autores 😁
 
-## Contribuição
-João  <br />
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+- 💻 [Alex Avelino](https://github.com/AlexAvelino)
+- 💻 [João Nicolete](https://github.com/JoaoNicolete)
+- 💻 [Lucas Escaler](https://github.com/LucasEscaler)
+- 💻 [Vinicius Roberto](https://github.com/ViniciusRob)
+
+
 
 ## Licença
 Alex  <br />
