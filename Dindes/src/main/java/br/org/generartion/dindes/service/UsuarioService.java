@@ -1,6 +1,8 @@
 package br.org.generartion.dindes.service;
 
 import java.nio.charset.Charset;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Optional;
 
 import org.apache.commons.codec.binary.Base64;
@@ -20,10 +22,15 @@ public class UsuarioService {
 
 	public Optional<Usuario> CadastrarUsuario(Usuario usuario) {
 
-		if(usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
+		if (usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
 			return null;
 
-		if(usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
+		if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
+			return null;
+
+		int idade = Period.between(usuario.getDataNascimento(), LocalDate.now()).getYears();
+
+		if (idade < 18)
 			return null;
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -34,8 +41,7 @@ public class UsuarioService {
 		return Optional.of(usuarioRepository.save(usuario));
 	}
 
-	public Optional<Usuario> atualizarUsuario(Usuario usuario){
-
+	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		String senhaEncoder = encoder.encode(usuario.getSenha());
@@ -59,7 +65,7 @@ public class UsuarioService {
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic " + new String(encodedAuth);
 
-				user.get().setToken(authHeader);				
+				user.get().setToken(authHeader);
 				user.get().setNome(usuario.get().getNome());
 				user.get().setSenha(usuario.get().getSenha());
 
