@@ -12,11 +12,11 @@ import br.org.generartion.dindes.model.Postagem;
 @Repository
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 
-	public List<Postagem> findAllByTituloContainingIgnoreCase(String titulo);
+	public List<Postagem> findAllByTextoContainingIgnoreCase(String texto);
 
-	public Optional<Postagem> findFirstByTituloIgnoreCase(String titulo);
+	public Optional<Postagem> findFirstByTextoIgnoreCase(String texto);
 
-	@Query(value = "select count(tema_id) from tb_postagens where tema_id = :id", nativeQuery = true)
+	@Query(value = "select count(tema_id) from tb_postagem where tema_id = :id", nativeQuery = true)
 	public int countPosts(@Param("id") long id);
 
 }

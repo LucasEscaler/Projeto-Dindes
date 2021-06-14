@@ -50,7 +50,7 @@ public class PostagemController {
 	// metodo que busca postagens por texto
 	@GetMapping("/texto/{texto}")
 	public ResponseEntity<List<Postagem>> GetByTexto(@PathVariable String texto){
-		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(texto));
+		return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(texto));
 	}
 	
 	// metodo que posta as postagens 

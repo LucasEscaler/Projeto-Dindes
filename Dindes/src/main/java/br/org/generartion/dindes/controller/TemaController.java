@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generartion.dindes.model.Tema;
 import br.org.generartion.dindes.repository.TemaRepository;
+import br.org.generartion.dindes.service.TemaService;
 
 @RestController
 @RequestMapping("/temas")
@@ -25,6 +26,9 @@ public class TemaController {
 
 	@Autowired
 	private TemaRepository repository;
+	
+	@Autowired
+	private TemaService temaService;
 	
 	@GetMapping
 	ResponseEntity<List<Tema>> GetAll (){
@@ -57,5 +61,12 @@ public class TemaController {
 	@DeleteMapping("/{id}")
 	public void deleteTema (@PathVariable long id) {
 		repository.deleteById(id);
-	} 
+	}
+	
+	@GetMapping("/trendtopics")
+	public ResponseEntity<List<Tema>> getTrendTopics() {
+		
+		return ResponseEntity.ok(temaService.trendTopics());
+	
+	}
 }
