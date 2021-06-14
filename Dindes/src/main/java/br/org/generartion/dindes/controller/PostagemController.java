@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generartion.dindes.model.Postagem;
 import br.org.generartion.dindes.repository.PostagemRepository;
+import br.org.generartion.dindes.service.PostagemService;
 
 @RestController
 @RequestMapping("/postagens")
@@ -25,6 +26,11 @@ public class PostagemController {
 	
 	@Autowired
 	private PostagemRepository repository;
+	
+	// injeção da classe Service
+	
+	@Autowired
+	private PostagemService postagemService;
 	
 	// metodo que mostra todas as postagens
 	@GetMapping
@@ -64,5 +70,19 @@ public class PostagemController {
 	public void deletePostagem (@PathVariable long id) {
 		repository.deleteById(id);
 	} 
+	
+	// metodo para curtir postagens
+	@PutMapping("/curtir/{id}")
+	public ResponseEntity<Postagem> putCurtirPostagemId(@PathVariable Long id) {
+		return ResponseEntity.status(HttpStatus.OK).body(postagemService.curtir(id));
+	}
+	
+	// metodo para descurtir uma postagem
+	@PutMapping("/descurtir/{id}")
+	public ResponseEntity<Postagem> putDescurtirPostagemId (@PathVariable Long id){
+		
+		return ResponseEntity.status(HttpStatus.OK).body(postagemService.descurtir(id));
+	
+	}
 
 }
