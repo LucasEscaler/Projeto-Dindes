@@ -17,10 +17,10 @@ Segurança:
 
 implementações:
 Like:
-- postagem service
-- postagem controller
+- postagem service - J
+- postagem controller - V
 
 Trending topics:
-- modificar postagem repósitory
-- Tema service
-- Testar
+- modificar postagem repósitory - L
+- Tema service - L
+- Testar - A
