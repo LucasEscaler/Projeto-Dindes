@@ -71,7 +71,7 @@ public class UsuarioService {
 				user.get().setUsuario(usuario.get().getUsuario());
 				user.get().setEmail(usuario.get().getEmail());
 				user.get().setSenha(usuario.get().getSenha());
-				// user.get().setDataNascimento(usuario.get().getDataNascimento());
+				user.get().setDataNascimento(usuario.get().getDataNascimento());
 				user.get().setArea(usuario.get().getArea());
 				user.get().setTelefone(usuario.get().getTelefone());
 				user.get().setSobre(usuario.get().getSobre());

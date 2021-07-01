@@ -32,7 +32,7 @@ public class Usuario {
 
 	@NotNull
 	private String usuario;
-	
+
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 5 e no máximo 255 caracteres")
 	private String email;
@@ -40,9 +40,9 @@ public class Usuario {
 	@NotNull
 	@Size(min = 4, message = "O campo deve conter no mínimo 4 caracteres")
 	private String senha;
-	
-	// @NotNull
-	// private Date dataNascimento;
+
+	@NotNull
+	private Date dataNascimento;
 
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 10 e no máximo 255 caracteres")
@@ -73,7 +73,7 @@ public class Usuario {
 	@JsonIgnoreProperties(value = { "apadrinhade", "dinde" })
 	private List<Usuario> apadrinhade;
 
-	// Getters e Setters	
+	// Getters e Setters
 	public long getId() {
 		return id;
 	}
@@ -114,13 +114,13 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	// public Date getDataNascimento() {
-	// 	return dataNascimento;
-	// }
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
 
-	// public void setDataNascimento(Date dataNascimento) {
-	// 	this.dataNascimento = dataNascimento;
-	// }
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
 
 	public String getArea() {
 		return area;

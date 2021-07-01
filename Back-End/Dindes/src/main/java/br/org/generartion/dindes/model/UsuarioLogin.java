@@ -3,29 +3,29 @@ package br.org.generartion.dindes.model;
 import java.util.Date;
 
 public class UsuarioLogin {
-	
+
 	private long id;
-	
+
 	private String nome;
-	
+
 	private String usuario;
-	
+
 	private String senha;
-	
+
 	private String token;
-	
+
 	private String email;
-	
-	// private Date dataNascimento;
-	
+
+	private Date dataNascimento;
+
 	private String area;
-	
+
 	private String telefone;
-	
+
 	private String sobre;
-	
+
 	private String foto;
-	
+
 	private String tipo;
 
 	public long getId() {
@@ -76,13 +76,13 @@ public class UsuarioLogin {
 		this.email = email;
 	}
 
-	// public Date getDataNascimento() {
-	// 	return dataNascimento;
-	// }
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
 
-	// public void setDataNascimento(Date dataNascimento) {
-	// 	this.dataNascimento = dataNascimento;
-	// }
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
 
 	public String getArea() {
 		return area;
@@ -123,6 +123,5 @@ public class UsuarioLogin {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	
+
 }
