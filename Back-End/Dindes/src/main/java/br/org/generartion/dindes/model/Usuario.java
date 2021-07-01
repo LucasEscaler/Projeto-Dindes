@@ -31,18 +31,18 @@ public class Usuario {
 	private String nome;
 
 	@NotNull
-	private Date dataNascimento;
-
-	@NotNull
 	private String usuario;
-
+	
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 5 e no máximo 255 caracteres")
 	private String email;
 
 	@NotNull
-	@Size(min = 6, message = "O campo deve conter no mínimo 6 caracteres")
+	@Size(min = 4, message = "O campo deve conter no mínimo 4 caracteres")
 	private String senha;
+	
+	@NotNull
+	private Date dataNascimento;
 
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 10 e no máximo 255 caracteres")
@@ -52,14 +52,12 @@ public class Usuario {
 	@Size(min = 11, max = 255, message = "O campo deve conter no mínimo 11 e no máximo 255 caracteres")
 	private String telefone;
 
-	@Size(min = 0, max = 255, message = "O campo deve conter no máximo 255 caracteres")
 	private String sobre;
 
-	@Size(min = 0, max = 255, message = "O campo deve conter no máximo 255 caracteres")
-	private String fotoString;
+	private String foto;
 
 	@NotNull
-	private boolean eDinde;
+	private String tipo;
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
@@ -75,7 +73,7 @@ public class Usuario {
 	@JsonIgnoreProperties(value = { "apadrinhade", "dinde" })
 	private List<Usuario> apadrinhade;
 
-	// Getters e Setters
+	// Getters e Setters	
 	public long getId() {
 		return id;
 	}
@@ -90,14 +88,6 @@ public class Usuario {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(@NotNull Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 
 	public String getUsuario() {
@@ -124,6 +114,14 @@ public class Usuario {
 		this.senha = senha;
 	}
 
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
 	public String getArea() {
 		return area;
 	}
@@ -148,20 +146,28 @@ public class Usuario {
 		this.sobre = sobre;
 	}
 
-	public String getFotoString() {
-		return fotoString;
+	public String getFoto() {
+		return foto;
 	}
 
-	public void setFotoString(String fotoString) {
-		this.fotoString = fotoString;
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
-	public boolean iseDinde() {
-		return eDinde;
+	public String getTipo() {
+		return tipo;
 	}
 
-	public void seteDinde(boolean eDinde) {
-		this.eDinde = eDinde;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
 	}
 
 	public Usuario getDinde() {
@@ -180,12 +186,4 @@ public class Usuario {
 		this.apadrinhade = apadrinhade;
 	}
 
-	public List<Postagem> getPostagem() {
-		return postagem;
-	}
-
-	public void setPostagem(List<Postagem> postagem) {
-		this.postagem = postagem;
-
-	}
 }
