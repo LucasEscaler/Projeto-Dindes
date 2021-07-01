@@ -41,8 +41,8 @@ public class Usuario {
 	@Size(min = 4, message = "O campo deve conter no mínimo 4 caracteres")
 	private String senha;
 	
-	@NotNull
-	private Date dataNascimento;
+	// @NotNull
+	// private Date dataNascimento;
 
 	@NotNull
 	@Size(min = 5, max = 255, message = "O campo deve conter no mínimo 10 e no máximo 255 caracteres")
@@ -114,13 +114,13 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
+	// public Date getDataNascimento() {
+	// 	return dataNascimento;
+	// }
 
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
+	// public void setDataNascimento(Date dataNascimento) {
+	// 	this.dataNascimento = dataNascimento;
+	// }
 
 	public String getArea() {
 		return area;

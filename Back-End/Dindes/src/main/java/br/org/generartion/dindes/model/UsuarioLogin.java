@@ -16,7 +16,7 @@ public class UsuarioLogin {
 	
 	private String email;
 	
-	private Date dataNascimento;
+	// private Date dataNascimento;
 	
 	private String area;
 	
@@ -76,13 +76,13 @@ public class UsuarioLogin {
 		this.email = email;
 	}
 
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
+	// public Date getDataNascimento() {
+	// 	return dataNascimento;
+	// }
 
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
+	// public void setDataNascimento(Date dataNascimento) {
+	// 	this.dataNascimento = dataNascimento;
+	// }
 
 	public String getArea() {
 		return area;

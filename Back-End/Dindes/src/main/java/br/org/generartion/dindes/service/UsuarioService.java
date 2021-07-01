@@ -1,8 +1,8 @@
 package br.org.generartion.dindes.service;
 
 import java.nio.charset.Charset;
-import java.time.LocalDate;
-import java.time.Period;
+// import java.time.LocalDate;
+// import java.time.Period;
 import java.util.Optional;
 
 import org.apache.commons.codec.binary.Base64;
@@ -71,7 +71,7 @@ public class UsuarioService {
 				user.get().setUsuario(usuario.get().getUsuario());
 				user.get().setEmail(usuario.get().getEmail());
 				user.get().setSenha(usuario.get().getSenha());
-				user.get().setDataNascimento(usuario.get().getDataNascimento());
+				// user.get().setDataNascimento(usuario.get().getDataNascimento());
 				user.get().setArea(usuario.get().getArea());
 				user.get().setTelefone(usuario.get().getTelefone());
 				user.get().setSobre(usuario.get().getSobre());
