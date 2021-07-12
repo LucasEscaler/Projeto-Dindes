@@ -22,11 +22,11 @@ public class UsuarioService {
 
 	public Optional<Usuario> CadastrarUsuario(Usuario usuario) {
 
-		/*if (usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
-			return null;*/
+		if (usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
+			return null;
 
-		/*if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
-			return null;*/
+		if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
+			return null;
 
 		/*int idade = Period.between(usuario.getDataNascimento(), LocalDate.now()).getYears();
 
