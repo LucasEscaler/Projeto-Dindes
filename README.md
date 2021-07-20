@@ -10,8 +10,8 @@ Lucas  <br />
 The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
 
 ## Status do projeto
-Lucas  <br />
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+<br />
+O nosso projeto está funcional e com sua base pronta, porém sempre estamos em constante desenvolvimento para melhorias e implementações futuras, para melhor experiência de nossos usuários.
 
 ## Features
 Vinicius  <br />
