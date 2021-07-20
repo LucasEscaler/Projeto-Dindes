@@ -2,7 +2,7 @@
 ![Dindes](https://i.imgur.com/PJ37uss.png)
 
 # Descrição
-Lucas <br />
+<br />
 Bem vindo(a) ao Dindes! Fiquem a vontade para conhecer nossa aplicação 😄. Nosso projeto é uma rede social para mulheres, e conta com um sistema exclusivo de apadrinhamento. A intenção é ajudar mulheres a ingressar no mercado de trabalho, aonde a apadrinhada vai ter ajuda da sua dinda, tanto em compartilhamento de conhecimento e cursos, quanto na indicação de vagas de emprego.
 
 ## Tabela de conteúdos
